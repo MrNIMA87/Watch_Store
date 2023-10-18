@@ -1,5 +1,4 @@
 abstract class AppString {
-  AppString._();
 
   static const String replace = "replace";
   static const String enterYourNumber = "شماره خود را وارد کنید";
