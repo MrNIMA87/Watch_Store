@@ -4,6 +4,7 @@ import 'package:watch_store/gen/assets.gen.dart';
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
 import 'package:watch_store/widgets/app_text_field.dart';
+import 'package:watch_store/widgets/main_button.dart';
 
 class SendOtpScreen extends StatelessWidget {
   SendOtpScreen({super.key});
@@ -29,6 +30,10 @@ class SendOtpScreen extends StatelessWidget {
               hint: AppString.hintPhoneNumber,
               controller: _controller,
             ),
+            //main button
+            MainButton(text: AppString.next, onPressed: () {
+              
+            },)
           ],
         ),
       )),

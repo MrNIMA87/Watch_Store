@@ -1,15 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:watch_store/components/extension.dart';
+import 'package:watch_store/gen/assets.gen.dart';
+import 'package:watch_store/resource/dimens.dart';
+import 'package:watch_store/resource/strings.dart';
+import 'package:watch_store/widgets/app_text_field.dart';
+import 'package:watch_store/widgets/main_button.dart';
 
-class GetOtpScreen extends StatefulWidget {
-  const GetOtpScreen({super.key});
+class GetOtpScreen extends StatelessWidget {
+  GetOtpScreen({super.key});
+  TextEditingController _controller = TextEditingController();
 
-  @override
-  State<GetOtpScreen> createState() => _GetOtpScreenState();
-}
-
-class _GetOtpScreenState extends State<GetOtpScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    Size size = MediaQuery.sizeOf(context);
+    return Scaffold(
+      body: SafeArea(
+          child: SizedBox(
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(Assets.images.png.mainLogo.path),
+            //sized box
+            Dimens.large.height,
+            //enter number phone
+            AppTextField(
+              Lable: AppString.enterYourNumber,
+              hint: AppString.hintPhoneNumber,
+              controller: _controller,
+            ),
+            //main button
+            MainButton(text: AppString.next, onPressed: () {
+              
+            },)
+          ],
+        ),
+      )),
+    );
   }
 }
