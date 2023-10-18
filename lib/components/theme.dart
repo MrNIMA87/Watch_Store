@@ -19,17 +19,17 @@ ThemeData lightTheme() {
           }
         },
       ),
-      contentPadding: const EdgeInsets.all(Dimens.medium),
+      contentPadding: const EdgeInsets.all(AppDimens.medium),
       enabledBorder: const OutlineInputBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(Dimens.medium),
+            Radius.circular(AppDimens.medium),
           ),
           borderSide: BorderSide(
             color: LightAppColors.borderColor,
           )),
       focusedBorder: const OutlineInputBorder(
           borderRadius: BorderRadius.all(
-            Radius.circular(Dimens.medium),
+            Radius.circular(AppDimens.medium),
           ),
           borderSide: BorderSide(
             color: LightAppColors.primaryColor,

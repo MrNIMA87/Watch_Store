@@ -8,7 +8,7 @@ class AppButtonStyle {
     shape: MaterialStatePropertyAll(
       RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
-          Radius.circular(Dimens.medium),
+          Radius.circular(AppDimens.medium),
         ),
       ),
     ),

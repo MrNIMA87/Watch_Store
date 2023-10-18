@@ -3,7 +3,9 @@ import 'package:watch_store/components/extension.dart';
 import 'package:watch_store/resource/dimens.dart';
 
 class AppTextField extends StatelessWidget {
-  final String Lable;
+  final String lable;
+  final String perfixLable;
+
   final String hint;
   TextEditingController controller;
   final Widget icon;
@@ -11,24 +13,34 @@ class AppTextField extends StatelessWidget {
   TextInputType? inputType;
 
   AppTextField({
-    required this.Lable,
+    required this.lable,
     required this.hint,
     this.icon = const SizedBox(),
     required this.controller,
     this.textAlign = TextAlign.center,
     this.inputType,
+    this.perfixLable = '',
   });
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
     return Padding(
-      padding: EdgeInsets.all(Dimens.medium),
+      padding: const EdgeInsets.all(AppDimens.medium),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Text(Lable),
-          Dimens.medium.height,
+          SizedBox(
+            width: size.width * .75,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(perfixLable),
+                Text(lable),
+              ],
+            ),
+          ),
+          AppDimens.medium.height,
           SizedBox(
             height: size.height * .07,
             width: size.width * .75,
