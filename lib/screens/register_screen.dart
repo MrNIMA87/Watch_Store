@@ -52,7 +52,7 @@ class RegisterScreen extends StatelessWidget {
                 AppTextField(
                   lable: AppString.location,
                   hint: AppString.hintLocation,
-                  icon: Icon(Icons.location_on),
+                  icon:const Icon(Icons.location_on),
                   controller: _controller,
                 ),
                 //main button
