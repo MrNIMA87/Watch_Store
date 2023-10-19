@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:watch_store/components/extension.dart';
+import 'package:watch_store/components/text_style.dart';
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
 import 'package:watch_store/widgets/app_text_field.dart';
@@ -12,10 +13,26 @@ class RegisterScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: SafeArea(
-        child: SizedBox(
+    Size size = MediaQuery.sizeOf(context);
+    return SafeArea(
+      child: Scaffold(
+        appBar: PreferredSize(
+          preferredSize: Size(size.width, size.height * .1),
+          child: Row(
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.arrow_back),
+              ),
+              //
+              const Text(
+                AppString.register,
+                style: LightAppTextStyle.title,
+              )
+            ],
+          ),
+        ),
+        body: SizedBox(
           width: double.infinity,
           child: SingleChildScrollView(
             child: Column(
@@ -52,12 +69,12 @@ class RegisterScreen extends StatelessWidget {
                 AppTextField(
                   lable: AppString.location,
                   hint: AppString.hintLocation,
-                  icon:const Icon(Icons.location_on),
+                  icon: const Icon(Icons.location_on),
                   controller: _controller,
                 ),
                 //main button
-                MainButton(text: AppString.next, onPressed: (){}),
-                 AppDimens.large.height,
+                MainButton(text: AppString.next, onPressed: () {}),
+                AppDimens.large.height,
               ],
             ),
           ),

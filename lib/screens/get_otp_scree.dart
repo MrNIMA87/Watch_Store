@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:watch_store/components/extension.dart';
+import 'package:watch_store/components/text_style.dart';
 import 'package:watch_store/gen/assets.gen.dart';
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
@@ -25,10 +26,17 @@ class GetOtpScreen extends StatelessWidget {
             //
             AppDimens.medium.height,
             //text
-            Text(AppString.otpCodeSendFor.replaceAll(AppString.replace, '09129666')),
+            Text(
+              AppString.otpCodeSendFor
+                  .replaceAll(AppString.replace, '09129666'),
+              style: LightAppTextStyle.title,
+            ),
             //
             AppDimens.small.height,
-            Text(AppString.wrongNumberEditNumber),
+            const Text(
+              AppString.wrongNumberEditNumber,
+              style: LightAppTextStyle.primaryThemeTextStyle,
+            ),
             //sized box
             AppDimens.large.height,
             //enter number phone
@@ -39,9 +47,10 @@ class GetOtpScreen extends StatelessWidget {
               controller: _controller,
             ),
             //main button
-            MainButton(text: AppString.next, onPressed: () {
-              
-            },)
+            MainButton(
+              text: AppString.next,
+              onPressed: () {},
+            )
           ],
         ),
       )),

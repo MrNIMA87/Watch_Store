@@ -15,4 +15,6 @@ class LightAppColors {
   static const Color primaryColor = Color.fromARGB(255, 0, 117, 251);
   static const Color focusedTextField = Colors.white;
   static const Color unfocusedTextField = Color.fromARGB(255, 251, 251, 251);
+  static const Color mainButtonText = Color.fromARGB(255, 255, 255, 255);
+
 }
