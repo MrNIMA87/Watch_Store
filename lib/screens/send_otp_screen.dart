@@ -3,6 +3,7 @@ import 'package:watch_store/components/extension.dart';
 import 'package:watch_store/gen/assets.gen.dart';
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
+import 'package:watch_store/route/names.dart';
 import 'package:watch_store/widgets/app_text_field.dart';
 import 'package:watch_store/widgets/main_button.dart';
 
@@ -31,9 +32,11 @@ class SendOtpScreen extends StatelessWidget {
               controller: _controller,
             ),
             //main button
-            MainButton(text: AppString.next, onPressed: () {
-              
-            },)
+            MainButton(
+              text: AppString.next,
+              onPressed: () =>
+                  Navigator.pushNamed(context, ScreenNames.getOtpScrren),
+            ),
           ],
         ),
       )),
