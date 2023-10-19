@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:watch_store/components/theme.dart';
 import 'package:watch_store/screens/get_otp_scree.dart';
+import 'package:watch_store/screens/register_screen.dart';
 import 'package:watch_store/screens/send_otp_screen.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: lightTheme(),
-      home:  GetOtpScreen(),
+      home:  RegisterScreen(),
     );
   }
 }
