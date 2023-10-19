@@ -22,16 +22,28 @@ class LightAppTextStyle {
     color: LightAppColors.title,
     fontWeight: FontWeight.w400,
   );
-    static const TextStyle mainButton = TextStyle(
+  static const TextStyle mainButton = TextStyle(
     fontFamily: FontFamily.dana,
     fontSize: 15,
     color: LightAppColors.mainButtonText,
     fontWeight: FontWeight.w500,
   );
-      static const TextStyle primaryThemeTextStyle = TextStyle(
+  static const TextStyle primaryThemeTextStyle = TextStyle(
     fontFamily: FontFamily.dana,
     fontSize: 15,
     color: LightAppColors.primaryColor,
+    fontWeight: FontWeight.w500,
+  );
+  static const TextStyle btmNavActiveTextStyle = TextStyle(
+    fontFamily: FontFamily.dana,
+    fontSize: 12,
+    color: LightAppColors.btmNavActiveItem,
+    fontWeight: FontWeight.w500,
+  );
+    static const TextStyle btmNavInActiveTextStyle = TextStyle(
+    fontFamily: FontFamily.dana,
+    fontSize: 12,
+    color: LightAppColors.btmNavInActiveItem,
     fontWeight: FontWeight.w500,
   );
 }
