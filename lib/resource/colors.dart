@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class LightAppColors {
   LightAppColors._();
   static const Color title = Colors.black;
-  static const Color hint = Color.fromARGB(255, 217, 220, 228);
+  static const Color hint = Color.fromARGB(255, 206, 210, 219);
   static const Color appBar = Color.fromARGB(255, 251, 251, 251);
   static const Color scaffoldBackgroundColor =
       Color.fromARGB(255, 251, 251, 251);

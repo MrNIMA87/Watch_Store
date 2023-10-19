@@ -35,5 +35,7 @@ ThemeData lightTheme() {
             color: LightAppColors.primaryColor,
           )),
     ),
+    //hintStyle
+    
   );
 }
