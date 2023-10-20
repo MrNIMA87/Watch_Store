@@ -45,8 +45,8 @@ class _MainScreenState extends State<MainScreen> {
                       builder: (context) =>const HomeScreen(),
                     ),
                   ),
-                  BasketScreen(),
-                  ProfileScreen(),
+                 const BasketScreen(),
+                 const ProfileScreen(),
                 ],
               )),
           //btmNav
