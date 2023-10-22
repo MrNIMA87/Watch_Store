@@ -23,6 +23,22 @@ class $AssetsImagesPngGen {
   AssetGenImage get avatar =>
       const AssetGenImage('assets/images/png/avatar.png');
 
+  /// File path: assets/images/png/banner_1.png
+  AssetGenImage get banner1 =>
+      const AssetGenImage('assets/images/png/banner_1.png');
+
+  /// File path: assets/images/png/banner_2.png
+  AssetGenImage get banner2 =>
+      const AssetGenImage('assets/images/png/banner_2.png');
+
+  /// File path: assets/images/png/banner_3.png
+  AssetGenImage get banner3 =>
+      const AssetGenImage('assets/images/png/banner_3.png');
+
+  /// File path: assets/images/png/banner_4.png
+  AssetGenImage get banner4 =>
+      const AssetGenImage('assets/images/png/banner_4.png');
+
   /// File path: assets/images/png/main_logo.png
   AssetGenImage get mainLogo =>
       const AssetGenImage('assets/images/png/main_logo.png');
@@ -32,7 +48,8 @@ class $AssetsImagesPngGen {
       const AssetGenImage('assets/images/png/unnamed.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [avatar, mainLogo, unnamed];
+  List<AssetGenImage> get values =>
+      [avatar, banner1, banner2, banner3, banner4, mainLogo, unnamed];
 }
 
 class $AssetsImagesSvgGen {

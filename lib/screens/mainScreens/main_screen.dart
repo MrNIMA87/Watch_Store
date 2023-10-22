@@ -36,11 +36,13 @@ class _MainScreenState extends State<MainScreen> {
   Future<bool> _onWillPop() async {
     if (map[selectedIndex]!.currentState!.canPop()) {
       map[selectedIndex]!.currentState!.pop();
-    } else if (_routeHistory.isNotEmpty) {
+    } else if (_routeHistory.length > 1) {
       setState(() {
         _routeHistory.removeLast();
         selectedIndex = _routeHistory.last;
       });
+    } else {
+      return false;
     }
     return false;
   }
