@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:watch_store/route/names.dart';
 import 'package:watch_store/screens/product_list_screen%20copy.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,7 +14,7 @@ class HomeScreen extends StatelessWidget {
           onPressed: () => Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => ProductListScreen(),
               )),
-          child: Text("مشاهده همه")),
+          child: const Text("مشاهده همه")),
     );
   }
 }

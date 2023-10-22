@@ -21,7 +21,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  List<int> _routeHistory = [BtmNavScreenIndex.home];
+  final List<int> _routeHistory = [BtmNavScreenIndex.home];
   final GlobalKey<NavigatorState> _homeKey = GlobalKey();
   final GlobalKey<NavigatorState> _basket = GlobalKey();
   final GlobalKey<NavigatorState> _profile = GlobalKey();
