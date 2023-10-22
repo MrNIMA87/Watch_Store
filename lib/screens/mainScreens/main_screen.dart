@@ -38,8 +38,8 @@ class _MainScreenState extends State<MainScreen> {
       map[selectedIndex]!.currentState!.pop();
     } else if (_routeHistory.isNotEmpty) {
       setState(() {
-        selectedIndex = _routeHistory.last - 1;
         _routeHistory.removeLast();
+        selectedIndex = _routeHistory.last;
       });
     }
     return false;
