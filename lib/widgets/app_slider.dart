@@ -6,8 +6,10 @@ import 'package:watch_store/resource/dimens.dart';
 class AppSlider extends StatefulWidget {
   const AppSlider({
     super.key,
+    required this.imageList,
   });
 
+  final List<String> imageList;
   @override
   State<AppSlider> createState() => _AppSliderState();
 }

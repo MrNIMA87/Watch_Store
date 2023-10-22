@@ -2,6 +2,22 @@ import 'package:flutter/material.dart';
 
 class LightAppColors {
   LightAppColors._();
+  static const List<Color> catClassicColors = [
+    Color.fromARGB(255, 255, 166, 114),
+    Color.fromARGB(255, 255, 227, 200),
+  ];
+  static const List<Color> catSmartColors = [
+    Color.fromARGB(255, 139, 162, 168),
+    Color.fromARGB(255, 223, 238, 245),
+  ];
+  static const List<Color> catDigitalColors = [
+    Color(0xffE183E4),
+    Color(0xffFFE6F5),
+  ];
+  static const List<Color> catDesktopColors = [
+    Color(0xff8396E1),
+    Color(0xffE6FCFF),
+  ];
   static const Color title = Colors.black;
   static const Color shadow = Color.fromARGB(90, 0, 0, 0);
   static const Color hint = Color.fromARGB(255, 206, 210, 219);
