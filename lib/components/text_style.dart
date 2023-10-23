@@ -10,10 +10,32 @@ class LightAppTextStyle {
     fontSize: 14,
     color: LightAppColors.title,
   );
+  static const TextStyle productTitle = TextStyle(
+    fontFamily: FontFamily.dana,
+    fontSize: 16,
+    color: LightAppColors.title,
+    fontWeight: FontWeight.normal,
+  );
+  static const TextStyle odlPrice = TextStyle(
+      fontFamily: FontFamily.dana,
+      fontSize: 12,
+      color: LightAppColors.oldPrice,
+      decoration: TextDecoration.lineThrough);
+  static const TextStyle productTimer = TextStyle(
+    fontFamily: FontFamily.dana,
+    fontSize: 15,
+    color: Colors.blue,
+  );
   static const TextStyle hint = TextStyle(
     fontFamily: FontFamily.dana,
     fontSize: 14,
     color: LightAppColors.hint,
+  );
+  static const TextStyle amazing = TextStyle(
+    fontFamily: FontFamily.dana,
+    fontSize: 22,
+    color: LightAppColors.amazing,
+    fontWeight: FontWeight.w700,
   );
 
   static const TextStyle avatarText = TextStyle(
@@ -40,7 +62,7 @@ class LightAppTextStyle {
     color: LightAppColors.btmNavActiveItem,
     fontWeight: FontWeight.w500,
   );
-    static const TextStyle btmNavInActiveTextStyle = TextStyle(
+  static const TextStyle btmNavInActiveTextStyle = TextStyle(
     fontFamily: FontFamily.dana,
     fontSize: 12,
     color: LightAppColors.btmNavInActiveItem,

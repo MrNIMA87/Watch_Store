@@ -18,9 +18,16 @@ class LightAppColors {
     Color(0xff8396E1),
     Color(0xffE6FCFF),
   ];
+  //
+  static const List<Color> productBgGradient = [
+    Color.fromARGB(255, 238, 238, 238),
+    Color.fromARGB(255, 255, 255, 255),
+  ];
   static const Color title = Colors.black;
   static const Color shadow = Color.fromARGB(90, 0, 0, 0);
   static const Color hint = Color.fromARGB(255, 206, 210, 219);
+  static const Color oldPrice = Color.fromARGB(255, 191, 191, 191);
+
   static const Color appBar = Color.fromARGB(255, 251, 251, 251);
   static const Color searchBar = Color.fromARGB(255, 251, 251, 251);
   static const Color scaffoldBackgroundColor =
@@ -36,4 +43,5 @@ class LightAppColors {
   static const Color btmNavColor = Color.fromARGB(255, 255, 255, 255);
   static const Color btmNavActiveItem = Color.fromARGB(255, 0, 0, 0);
   static const Color btmNavInActiveItem = Color.fromARGB(255, 196, 196, 196);
+  static const Color amazing = Color.fromARGB(255, 57, 24, 80);
 }

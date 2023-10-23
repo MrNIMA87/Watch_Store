@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:watch_store/components/extension.dart';
 import 'package:watch_store/components/text_style.dart';
 
-import '../gen/assets.gen.dart';
+
 import '../resource/dimens.dart';
 
 class CateGory extends StatelessWidget {
@@ -30,8 +30,8 @@ class CateGory extends StatelessWidget {
         children: [
           Container(
             margin: const EdgeInsets.all(AppDimens.small),
-            width: size.width * .16,
-            height: size.height * .09,
+            width: size.width * .18,
+            height: size.height * .08,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(AppDimens.large),
               gradient: LinearGradient(

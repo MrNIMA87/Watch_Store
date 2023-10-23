@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:intl/intl.dart';
 import 'package:watch_store/components/extension.dart';
 import 'package:watch_store/components/text_style.dart';
 import 'package:watch_store/gen/assets.gen.dart';
@@ -12,6 +13,8 @@ import 'package:watch_store/widgets/search_bar.dart';
 
 import '../../widgets/app_slider.dart';
 import '../../widgets/category.dart';
+import '../../widgets/product_item.dart';
+import '../../widgets/vertical_text.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -80,14 +83,8 @@ class HomeScreen extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         itemCount: 10,
                         shrinkWrap: true,
-                        itemBuilder: (context, index) {
-                          return Container(
-                            margin: const EdgeInsets.all(8.0),
-                            color: Colors.grey,
-                            height: 295,
-                            width: 200,
-                          );
-                        },
+                        itemBuilder: (context, index) => ProductItem(
+                            productName: "ساعت مردانه", price: 200),
                       ),
                     ),
                     //text
@@ -97,37 +94,6 @@ class HomeScreen extends StatelessWidget {
               )
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class VerticalText extends StatelessWidget {
-  const VerticalText({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: RotatedBox(
-        quarterTurns: -1,
-        child: Column(
-          children: [
-            Row(
-              children: [
-                SvgPicture.asset(Assets.images.svg.leftArrow),
-                const Text(
-                  'مشاهده همه',
-                  style: LightAppTextStyle.title,
-                )
-              ],
-            ),
-            Text(
-              'شگفت انگیزان',
-              style: LightAppTextStyle.title,
-            )
-          ],
         ),
       ),
     );
