@@ -10,6 +10,11 @@ class LightAppTextStyle {
     fontSize: 14,
     color: LightAppColors.title,
   );
+  static const TextStyle tagTitle = TextStyle(
+    fontFamily: FontFamily.dana,
+    fontSize: 13,
+    color: Colors.white,
+  );
   static const TextStyle productTitle = TextStyle(
     fontFamily: FontFamily.dana,
     fontSize: 16,

@@ -89,9 +89,12 @@ class ProductItem extends StatelessWidget {
             ),
           ),
           AppDimens.medium.height,
-          Text(
-            timer.toString(),
-            style: LightAppTextStyle.productTimer,
+          Visibility(
+            visible:  timer > 0? true : false,
+            child: Text(
+              timer.toString(),
+              style: LightAppTextStyle.productTimer,
+            ),
           )
         ],
       ),

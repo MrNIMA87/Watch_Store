@@ -107,7 +107,7 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     //basket
                     BtmNavItem(
-                      iconSvgPath: Assets.images.svg.basket,
+                      iconSvgPath: Assets.images.svg.cart,
                       text: 'سبد خرید',
                       isActive: selectedIndex == BtmNavScreenIndex.basket,
                       onTap: () =>

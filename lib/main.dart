@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:watch_store/components/theme.dart';
 import 'package:watch_store/route/names.dart';
 import 'package:watch_store/route/route.dart';
 import 'package:watch_store/screens/product_list_screen.dart';
 
-
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarBrightness: Brightness.light,
+    statusBarColor: Colors.white,
+    statusBarIconBrightness: Brightness.dark,
+    systemNavigationBarIconBrightness: Brightness.dark,
+    systemNavigationBarColor: Colors.white,
+  ));
   runApp(const MyApp());
 }
 
@@ -23,7 +30,7 @@ class MyApp extends StatelessWidget {
       // home:  GetOtpScreen(),
       initialRoute: ScreenNames.root,
       // routes: routes,
-    home: ProductListScreen(),
+      home: const ProductListScreen(),
     );
   }
 }
