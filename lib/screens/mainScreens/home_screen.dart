@@ -83,8 +83,7 @@ class HomeScreen extends StatelessWidget {
                         scrollDirection: Axis.horizontal,
                         itemCount: 10,
                         shrinkWrap: true,
-                        itemBuilder: (context, index) => ProductItem(
-                            productName: "ساعت مردانه", price: 200),
+                        itemBuilder: (context, index) => ProductItem(productName: 200, price: 150)
                       ),
                     ),
                     //text

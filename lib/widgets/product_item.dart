@@ -16,7 +16,7 @@ class ProductItem extends StatelessWidget {
     this.timer = 0,
   });
   final productName;
- final int price;
+  final price;
   final oldPrice;
   final disCount;
   final timer;
@@ -40,7 +40,7 @@ class ProductItem extends StatelessWidget {
           Align(
             alignment: Alignment.centerRight,
             child: Text(
-              productName,
+              productName.toString(),
               style: LightAppTextStyle.productTitle,
             ),
           ),
@@ -52,14 +52,14 @@ class ProductItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '${price.seprateWithComma} تومان',
+                    '${price.toString()} تومان',
                     style: LightAppTextStyle.title,
                   ),
                   //
                   Visibility(
                     visible: disCount > 0 ? true : false,
                     child: Text(
-                      '${oldPrice.seprateWithComma}',
+                      oldPrice.toString(),
                       style: LightAppTextStyle.odlPrice,
                     ),
                   )
@@ -90,7 +90,7 @@ class ProductItem extends StatelessWidget {
           ),
           AppDimens.medium.height,
           Text(
-            timer,
+            timer.toString(),
             style: LightAppTextStyle.productTimer,
           )
         ],

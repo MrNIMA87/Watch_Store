@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:watch_store/components/theme.dart';
 import 'package:watch_store/route/names.dart';
 import 'package:watch_store/route/route.dart';
+import 'package:watch_store/screens/product_list_screen.dart';
 
 
 void main() {
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       theme: lightTheme(),
       // home:  GetOtpScreen(),
       initialRoute: ScreenNames.root,
-      routes: routes,
+      // routes: routes,
+    home: ProductListScreen(),
     );
   }
 }
