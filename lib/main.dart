@@ -5,6 +5,7 @@ import 'package:watch_store/components/theme.dart';
 import 'package:watch_store/route/names.dart';
 import 'package:watch_store/route/route.dart';
 import 'package:watch_store/screens/product_list_screen.dart';
+import 'package:watch_store/screens/product_single_screen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       // home:  GetOtpScreen(),
       initialRoute: ScreenNames.root,
       // routes: routes,
-      home: const ProductListScreen(),
+      home: const ProductSingleScreen(),
     );
   }
 }

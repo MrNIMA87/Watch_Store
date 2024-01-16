@@ -7,6 +7,8 @@ import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/widgets/product_item.dart';
 
 import '../gen/assets.gen.dart';
+import '../widgets/badge.dart';
+import '../widgets/custom_appbar.dart';
 
 class ProductListScreen extends StatelessWidget {
   const ProductListScreen({super.key});
@@ -44,75 +46,10 @@ class ProductListScreen extends StatelessWidget {
   }
 }
 
-class CustomAppBar extends StatelessWidget implements PreferredSize {
-  const CustomAppBar({super.key, required this.child});
-  @override
-  final Widget child;
-  @override
-  Widget build(BuildContext context) {
-    return PreferredSize(
-      preferredSize: preferredSize,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: AppDimens.medium),
-        height: preferredSize.height,
-        decoration: const BoxDecoration(
-          color: LightAppColors.appBar,
-          borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(AppDimens.medium),
-            bottomRight: Radius.circular(AppDimens.medium),
-          ),
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-              color: LightAppColors.shadow,
-              offset: Offset(0, 5),
-              blurRadius: 3,
-            ),
-          ],
-        ),
-        child: child,
-      ),
-    );
-  }
 
-  @override
-  Size get preferredSize => const Size.fromHeight(50);
-}
 
 //
-class CartBadge extends StatelessWidget {
-  const CartBadge({super.key, this.count = 0});
-  final count;
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        const SizedBox(width: 32, height: 32),
-        SvgPicture.asset(
-          Assets.images.svg.cart,
-          colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn),
-        ),
-        Visibility(
-          visible: count == 0 ? false : true,
-          child: Positioned(
-            top: 0,
-            right: 0,
-            child: Container(
-              padding: const EdgeInsets.all(4.5),
-              decoration: const BoxDecoration(
-                color: Colors.red,
-                shape: BoxShape.circle,
-              ),
-              child: Text(
-                '$count',
-                style: const TextStyle(color: Colors.white),
-              ),
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
+
 
 //Tag List
 class TagList extends StatelessWidget {

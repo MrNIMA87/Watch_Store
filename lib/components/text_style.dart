@@ -10,6 +10,16 @@ class LightAppTextStyle {
     fontSize: 14,
     color: LightAppColors.title,
   );
+  static const TextStyle selectedTab = TextStyle(
+    fontFamily: FontFamily.dana,
+    fontSize: 14,
+    color: LightAppColors.title,
+  );
+    static  TextStyle unselectedTab = TextStyle(
+    fontFamily: FontFamily.dana,
+    fontSize: 14,
+    color: LightAppColors.title.withAlpha(125),
+  );
   static const TextStyle tagTitle = TextStyle(
     fontFamily: FontFamily.dana,
     fontSize: 13,
@@ -19,6 +29,12 @@ class LightAppTextStyle {
     fontFamily: FontFamily.dana,
     fontSize: 16,
     color: LightAppColors.title,
+    fontWeight: FontWeight.normal,
+  );
+  static TextStyle caption = TextStyle(
+    fontFamily: FontFamily.dana,
+    fontSize: 16,
+    color: LightAppColors.title.withAlpha(150),
     fontWeight: FontWeight.normal,
   );
   static const TextStyle odlPrice = TextStyle(
