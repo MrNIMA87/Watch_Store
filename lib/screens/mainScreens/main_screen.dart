@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:watch_store/gen/assets.gen.dart';
 import 'package:watch_store/resource/colors.dart';
-import 'package:watch_store/screens/mainScreens/basket_screen.dart';
+import 'package:watch_store/screens/mainScreens/cart_screen.dart';
 import 'package:watch_store/screens/mainScreens/home_screen.dart';
 import 'package:watch_store/screens/mainScreens/profile_screen.dart';
 import 'package:watch_store/widgets/btm_nav_item.dart';
@@ -74,7 +74,7 @@ class _MainScreenState extends State<MainScreen> {
                     Navigator(
                       key: _basket,
                       onGenerateRoute: (settings) => MaterialPageRoute(
-                        builder: (context) => const BasketScreen(),
+                        builder: (context) => const CartScreen(),
                       ),
                     ),
                     Navigator(

@@ -8,7 +8,7 @@ extension SizedBoxExtension on double {
 }
 
 extension intExtension on int{
-  String get seprateWithComma {
+  String get separateWithComma {
     final numberFormat = NumberFormat.decimalPattern();
   return numberFormat.format(this);
   }

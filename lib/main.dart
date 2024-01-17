@@ -4,6 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:watch_store/components/theme.dart';
 import 'package:watch_store/route/names.dart';
 import 'package:watch_store/route/route.dart';
+import 'package:watch_store/screens/mainScreens/cart_screen.dart';
+import 'package:watch_store/screens/mainScreens/profile_screen.dart';
 import 'package:watch_store/screens/product_list_screen.dart';
 import 'package:watch_store/screens/product_single_screen.dart';
 
@@ -28,10 +30,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: lightTheme(),
-      // home:  GetOtpScreen(),
+      home:  ProfileScreen(),
       initialRoute: ScreenNames.root,
       // routes: routes,
-      home: const ProductSingleScreen(),
     );
   }
 }

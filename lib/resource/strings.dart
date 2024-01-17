@@ -1,5 +1,4 @@
 abstract class AppString {
-
   static const String replace = "replace";
   static const String enterYourNumber = "شماره خود را وارد کنید";
   static const String hintPhoneNumber = "مثل :  09121114466";
@@ -14,10 +13,14 @@ abstract class AppString {
   static const String nameLastName = "نام و نام خانوادگی";
   static const String homeNumber = "تلفن ثابت";
   static const String address = "آدرس";
+  static const String sendToAddress = "ارسال به آدرس";
+
   static const String postalCode = "کد پستی";
   static const String location = "موقعیت مکانی";
-  static const String hintNameLastName = "نام و نام خانوادگی خود را با حروف فارسی وارد کنید";
-  static const String hintHomeNumber = "شماره تلفن ثابت را با پیش شماره وارد بفرمایید";
+  static const String hintNameLastName =
+      "نام و نام خانوادگی خود را با حروف فارسی وارد کنید";
+  static const String hintHomeNumber =
+      "شماره تلفن ثابت را با پیش شماره وارد بفرمایید";
   static const String hintAddress = "آدرس پستی خود را وارد کنید";
   static const String hintPostalCode = "کد پستی  10 رقمی خود را وارد کنید";
   static const String hintLocation = "برای انتخاب موقعیت مکانی ضربه برنید";
@@ -25,14 +28,14 @@ abstract class AppString {
   static const String classic = "کلاسیک";
   static const String smart = "هوشمند";
   static const String digital = "دیجیتال";
-  static const String desktop= "رو میزی";
-  static const String viewAll= "مشاهده همه";
-  static const String amazing= "شگفت انگیز";
-  static const String home= "خانه";
-  static const String basket= "سبد خرید";
-  static const String profile= "پروفایل";
-  static const String topSells= "پرفروش‌ها";
-  static const String newestProduct= "جدیدترین محصولات";
+  static const String desktop = "رو میزی";
+  static const String viewAll = "مشاهده همه";
+  static const String amazing = "شگفت انگیز";
+  static const String home = "خانه";
+  static const String basket = "سبد خرید";
+  static const String profile = "پروفایل";
+  static const String topSells = "پرفروش‌ها";
+  static const String newestProduct = "جدیدترین محصولات";
   static const String features = "خصوصیات";
   static const String review = "نقد و بررسی";
   static const String commnets = "نظرات";
@@ -46,4 +49,5 @@ abstract class AppString {
   static const String inProccess = "درحال پردازش";
   static const String cancelled = "لغو شده";
   static const String delivered = "تحویل شده";
+  static const String lorem = 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهموم از صنعت چاپ';
 }
