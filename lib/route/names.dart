@@ -3,8 +3,8 @@ class ScreenNames {
 
   static const root = "/";
 
-  static const getOtpScrren = '/getOtpScrren';
-  static const sendOtpScreen = '/sendOtpScreen';
+  static const verifyCodeScreen = '/getOtpScrren';
+  static const sendSmsScreen = '/sendOtpScreen';
   static const registerScreen = '/registerScreen';
   static const mainScreen = '/mainScreen';
   static const productListScreen = '/productListScreen';

@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:watch_store/components/theme.dart';
-import 'package:watch_store/route/names.dart';
+import 'package:watch_store/cubit/auth_cubit.dart';
 import 'package:watch_store/route/route.dart';
-import 'package:watch_store/screens/mainScreens/cart_screen.dart';
-import 'package:watch_store/screens/mainScreens/profile_screen.dart';
-import 'package:watch_store/screens/product_list_screen.dart';
-import 'package:watch_store/screens/product_single_screen.dart';
+import 'package:watch_store/screens/auth/snd_sms.dart';
+import 'package:watch_store/screens/mainScreens/main_screen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -26,13 +24,24 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: lightTheme(),
-      home:  ProfileScreen(),
-      initialRoute: ScreenNames.root,
-      // routes: routes,
+    return BlocProvider(
+      create: (context) => AuthCubit(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: lightTheme(),
+        // initialRoute: ScreenNames.root,
+        routes: routes,
+        home: BlocBuilder<AuthCubit, AuthState>(builder: (context, state) {
+          if (state is LoggedInState) {
+            return const MainScreen();
+          } else if (state is LoggedOutState) {
+            return SendSmsScreen();
+          } else {
+            return SendSmsScreen();
+          }
+        }),
+      ),
     );
   }
 }
