@@ -6,8 +6,12 @@ import 'package:watch_store/cubit/auth_cubit.dart';
 import 'package:watch_store/route/route.dart';
 import 'package:watch_store/screens/auth/snd_sms.dart';
 import 'package:watch_store/screens/mainScreens/main_screen.dart';
+import 'package:watch_store/screens/register_screen.dart';
+import 'package:watch_store/utils/shared_preferences_manager.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SharedPreferencesManager().init();
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarBrightness: Brightness.light,
     statusBarColor: Colors.white,
@@ -32,15 +36,7 @@ class MyApp extends StatelessWidget {
         theme: lightTheme(),
         // initialRoute: ScreenNames.root,
         routes: routes,
-        home: BlocBuilder<AuthCubit, AuthState>(builder: (context, state) {
-          if (state is LoggedInState) {
-            return const MainScreen();
-          } else if (state is LoggedOutState) {
-            return SendSmsScreen();
-          } else {
-            return SendSmsScreen();
-          }
-        }),
+        home: RegisterScreen()
       ),
     );
   }

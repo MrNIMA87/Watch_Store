@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:meta/meta.dart';
 import 'package:watch_store/data/constants.dart';
+import 'package:watch_store/utils/shared_preferences_manager.dart';
 
 part 'auth_state.dart';
 
@@ -49,13 +50,19 @@ class AuthCubit extends Cubit<AuthState> {
             print(value.toString()),
             if (value.statusCode == 201)
               {
-                if(value.data["data"]['is_registered'] ){
-                  emit(VerifiedIsRegisteredState()),
-                }else{
-                  emit(VerifiedIsRegisteredNotState()),
+                SharedPreferencesManager()
+                    .saveString('token', value.data["data"]['token']),
+                    SharedPreferencesManager().getString('token'),
 
-                }
-                
+                    log('توکنننننننننننننننننننننننننننننننننننن ${SharedPreferencesManager().getString('token')}'),
+                if (value.data["data"]['is_registered'])
+                  {
+                    emit(VerifiedIsRegisteredState()),
+                  }
+                else
+                  {
+                    emit(VerifiedIsRegisteredNotState()),
+                  }
               }
             else
               {

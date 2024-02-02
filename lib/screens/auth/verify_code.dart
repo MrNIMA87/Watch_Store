@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:watch_store/components/extension.dart';
@@ -13,7 +12,7 @@ import 'package:watch_store/widgets/app_text_field.dart';
 import 'package:watch_store/widgets/main_button.dart';
 
 class VerifyCodeScreen extends StatefulWidget {
-  VerifyCodeScreen({super.key});
+  const VerifyCodeScreen({super.key});
 
   @override
   State<VerifyCodeScreen> createState() => _VerifyCodeScreenState();
@@ -30,12 +29,13 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
 
   late Timer _timer;
   int _start = 120;
+
   startTimer() {
     const oneSec = Duration(seconds: 1);
     _timer = Timer.periodic(oneSec, (timer) {
       setState(() {
         if (_start == 0) {
-          timer.cancel();
+          _timer.cancel();
           Navigator.of(context).pop();
         } else {
           _start--;
@@ -47,8 +47,9 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
   String formatTime(int sec) {
     int min = sec ~/ 60;
     int seconds = sec % 60;
+
     String minStr = min.toString().padLeft(2, "0");
-    String secondsStr = min.toString().padLeft(2, "0");
+    String secondsStr = seconds.toString().padLeft(2, "0");
     return '$minStr:$secondsStr';
   }
 
@@ -94,6 +95,7 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
             //main button
             BlocConsumer<AuthCubit, AuthState>(
               listener: (context, state) {
+                _timer.cancel();
                 if (state is VerifiedIsRegisteredNotState) {
                   Navigator.pushNamed(context, ScreenNames.registerScreen);
                 } else if (state is VerifiedIsRegisteredState) {

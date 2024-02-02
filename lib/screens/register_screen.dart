@@ -1,17 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:watch_store/components/extension.dart';
 import 'package:watch_store/resource/dimens.dart';
 import 'package:watch_store/resource/strings.dart';
 import 'package:watch_store/route/names.dart';
+import 'package:watch_store/utils/image_handeler.dart';
 import 'package:watch_store/widgets/app_text_field.dart';
 import 'package:watch_store/widgets/avatar.dart';
 import 'package:watch_store/widgets/main_button.dart';
 
 import '../widgets/register_appbar.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   RegisterScreen({super.key});
-  TextEditingController _controller = TextEditingController();
+
+  @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  final TextEditingController _controller = TextEditingController();
+
+  ImageHandler imageHandler = ImageHandler();
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +37,12 @@ class RegisterScreen extends StatelessWidget {
                 //sizedBox
                 AppDimens.large.height,
                 //avatar
-                const Avatar(),
+                Avatar(
+                  onTap: () async => await imageHandler
+                      .pickAndCropImage(source: ImageSource.gallery)
+                      .then((value) => setState(() {})),
+                  file: imageHandler.getImage,
+                ),
                 //
                 AppTextField(
                   lable: AppString.nameLastName,
@@ -60,7 +75,11 @@ class RegisterScreen extends StatelessWidget {
                   controller: _controller,
                 ),
                 //main button
-                MainButton(text: AppString.next, onPressed: () => Navigator.pushNamed(context, ScreenNames.mainScreen),),
+                MainButton(
+                  text: AppString.next,
+                  onPressed: () =>
+                      Navigator.pushNamed(context, ScreenNames.mainScreen),
+                ),
                 AppDimens.large.height,
               ],
             ),
