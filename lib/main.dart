@@ -4,9 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:watch_store/components/theme.dart';
 import 'package:watch_store/cubit/auth_cubit.dart';
 import 'package:watch_store/route/route.dart';
-import 'package:watch_store/screens/auth/snd_sms.dart';
-import 'package:watch_store/screens/mainScreens/main_screen.dart';
-import 'package:watch_store/screens/register_screen.dart';
+import 'package:watch_store/screens/register/register_screen.dart';
 import 'package:watch_store/utils/shared_preferences_manager.dart';
 
 void main() async {

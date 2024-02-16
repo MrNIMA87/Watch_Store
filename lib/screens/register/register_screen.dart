@@ -9,7 +9,7 @@ import 'package:watch_store/widgets/app_text_field.dart';
 import 'package:watch_store/widgets/avatar.dart';
 import 'package:watch_store/widgets/main_button.dart';
 
-import '../widgets/register_appbar.dart';
+import '../../widgets/register_appbar.dart';
 
 class RegisterScreen extends StatefulWidget {
   RegisterScreen({super.key});
